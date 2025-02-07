@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #121212;
+    color: white;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.logo{
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+h2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.category {
+    margin-top: 30px;
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.epic { background-color: #ff4500; color: white; }  
+.rare { background-color: #1e90ff; color: white; }   
+.common { background-color: #32cd32; color: white; } 
+
+.shop-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#epic-container .product {
+    background: linear-gradient(45deg, #ff4400, #ff9f29) !important; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ff4500, 0 0 20px #ff6347, 0 0 30px #ff8c00;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px #ff4500, 0 0 20px #ff6347, 0 0 0px #ff8c00;
+    }
+    100% {
+        box-shadow: 0 0 15px #ff6347, 0 0 25px #ff8c00, 0 0 50px #ff4500;
+    }
+}
+
+#rare-container .product {
+    background: linear-gradient(45deg, violet, blue);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#common-container .product {
+    background-color: rgba(50, 205, 50, 0.384); 
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.product {
+    background: #1e1e1e;
+    padding: 15px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.redeem-btn {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.redeem-btn:hover {
+    background: #ffdb4d;
+}
+
+@media screen and (max-width: 768px) {
+    .shop-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 90%; 
+        max-width: 350px; 
+    }
+    
+    h1 {
+        font-size: 24px; 
+    }
+    
+    .category {
+        font-size: 18px;
+        padding: 8px;
+    }
+}
